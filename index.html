@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day3-JS</title>
+</head>
+<body>
+    
+    <b>not defined</b> - Any variable which we try to access but not declared will throw us a reference Error : variable not defined <br>
+    <pre>console.log(myAge); // not defined</pre>
+
+    <b>undefined</b> - If a variable is declared but not assigned  any value yet but we try to access that variable then we will get the error as undefined. <br>
+    <pre>
+        let myHobbies;
+        console.log(myHobbies);
+        myHobbies = "Carrom";
+        console.log(myHobbies);
+    </pre>
+
+    <b>null</b> - Its a default value assigned by a user to the variable as long as the variable has not been assigned its original / updated value. <br>
+    <pre>  
+        let amIadult = null;
+        console.log(amIadult);
+
+        amIadult = true; //Boolean value
+        console.log(amIadult);
+    </pre>
+
+    <b>Global Scope and Local/Block Scope</b> <br>
+    <pre>
+        let fname = "Hari";
+        const lname = "Bajaj";
+        var age = 29;
+
+        console.log(fname, lname, age);
+        <b><i>Anything which is declared outside local or block scope or outside curly braces is called global scope</i></b>
+        {
+             console.log(fname, lname, age);
+        }
+
+        console.log(fname, lname, age);
+    </pre>
+
+    <pre>
+        <b><i>Anything which is inside between curly braces is called local/block scope.</i></b>
+        {
+            let fname = "Hari";
+            const lname = "Bajaj";
+            var age = 29;
+            console.log(fname, lname, age);
+        }
+    </pre>
+
+    In Global Scope generally we are not able to access block scope variables as long as there's let/const keywords, so it will give us a reference error : variable not defined.
+    but for var we can access them even on global scope.
+    <pre>
+        console.log(fname);
+        console.log(lname);
+        console.log(age);
+    </pre>
+
+
+    <b>Hoisting</b> - Its only supported with that of var keywords and with the function. Let and const keywords do not support hoisting. <br>
+    let keyword variables cannot be accessed before declaration or initialization. <br>
+    <pre>
+        //console.log(game);// ReferenceError: Cannot access 'game' before initialization.
+        let game = "carrom";
+
+        //console.log(game1);// ReferenceError: Cannot access 'game' before initialization.
+        const game1 = "cricket";
+
+        // var keyword variables are hoisted.
+        console.log(game2);
+        var game2;
+        game2 = "Badminton";
+        console.log(game2); //Badminton
+    </pre>
+
+    <b><i>Note - For var keyword variables, if we try to access them before assigning values to them will give us undefined but the moment we declare a value to it, it will give us the assigned value.</i></b> <br>
+    <br>
+    <b>Hoisting in functions</b> <br>
+
+    <i>functions are hoisted because of which we can call the function before declaring the function.</i> <br>
+
+    <pre>
+        add(2,3);//arguments
+
+        function add(a,b){
+            let result = a+b;
+            console.log(result);
+            console.log("hello add function");
+        }
+    </pre>
+
+    <a href="./operators.html">Operators</a>
+
+    <script src="./style.js"></script>
+</body>
+</html>

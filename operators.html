@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    
+    <b>Arithmetic Opertors</b> <br>
+     +, -, /, *, % <br>
+     <br>
+
+    <b>modulus - It gives us the remainder.</b> <br>
+    <pre>
+        console.log(2+3);//5
+        console.log(2-3);//-1
+        console.log(2*3);//6
+        console.log(2/3);//0.66666
+        console.log(2%3);//2
+    </pre>
+
+    <b>Comparison Operators</b> <br>
+    1.==/!= only check the values and not the data types. <br>
+    2.but === check both the values and the data types. <br>
+
+    <, >, <=, >=, ==, ===, != <br>
+    <pre>
+        console.log(2<3);//true(boolean values)
+        console.log(2>3);//false
+        console.log(2>=3);//false
+        console.log(2<=3);//true (true or false i.e true)
+
+        console.log(2==2);//true
+        console.log(2===2);//true values are 2 and data types number
+        console.log(2=="2");//true 
+        console.log(2==="2");//false values are 2 and data types are number and string.
+        console.log(2!=3);//true
+        console.log(2!=2);//false
+        console.log(2!==2);//false
+    </pre>
+
+    <b>Logical Operators</b> <br>
+    ||, &&, ! <br>
+
+    <b>OR operator</b> <br>
+    1.||- if the value is non-zero the first value is print. <br>
+    2.||- if the value is zero the second value is print. <br>
+    <pre>
+        console.log(2||3); //2 
+        console.log(0||3); //3
+        console.log(0||0); //0
+    </pre>
+
+    <b>AND operator && - bigger value is printed</b> <br>
+    <pre>
+        console.log(1&&3);//3
+        console.log(0&&3);//0
+        console.log(1&&0);//0
+        console.log(2&&3);//0
+    </pre>
+
+    <b>NOT operator</b> <br>
+    <pre>
+        console.log(!0);// true
+        console.log(!1);// false
+        console.log(!2);// false
+    </pre>
+
+    <b>Increment and Decrement Operators</b> <br>
+    1.post increment operators (++) <br>
+    2.post decrement operators (--) <br>
+
+    <pre>
+        let a = 1;
+        a++;// a = a+1
+        console.log(a);//2
+        a--;// a = a-1
+        console.log(a);//1
+        // a = 1;
+        console.log(a++);//1 I will first print the value of a and then increment its value with 1 which will be reflected in next line not on the same line.
+        console.log(a);//2
+        // a = 2;
+        console.log(a--);//2 I will first print the value of a and then increment its value with 1 which will be reflected in next line not on the same line.
+        console.log(a);//1
+
+        let b = 2;
+        b*=3; // b = b*3
+        b/=3; // b = b/3
+        b+=2; // b = b+2
+        b-=2; // b = b-2
+    </pre>
+
+
+    <script src="./operators.js"></script>
+</body>
+</html>
